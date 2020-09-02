@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    --font-main: 'Oswald', sans-serif;
+}
+.main{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(Resources/Coffie.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    font-family: var(--font-main);
+    font-size: 4em;
+    color:#222;
+}
+.main nav{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    border-bottom: hsl(0deg, 100%, 100%,10%) solid 2px;
+}
+.main nav ul{
+    display:flex;
+    justify-content: space-around;
+}
+.main li{
+    list-style: none;
+}
+.main a{
+    text-decoration:none;
+    color:#222;
+    font-size: .5em;
+}
+.container{
+    width:32px;
+    height:32px;
+}
