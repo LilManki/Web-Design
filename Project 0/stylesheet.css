@@ -1,3 +1,4 @@
+@import url('https://css.gg/menu.css');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
 *{
     margin:0;
@@ -6,17 +7,21 @@
 }
 body{
     --font-main: 'Oswald', sans-serif;
+    overflow-x: hidden;
 }
-.main{
+.main
+,.second-section{
     min-height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-image: url(Resources/Coffie.jpg);
     background-repeat: no-repeat;
     background-size:cover;
     font-family: var(--font-main);
     font-size: 4em;
+}
+.main{
+    justify-content: center;
+    align-items: center;
+    background-image: url(Resources/Coffie.jpg);
     color:#222;
 }
 .main nav{
@@ -27,11 +32,13 @@ body{
     border-bottom: hsl(0deg, 100%, 100%,10%) solid 2px;
 }
 .main nav ul{
+    height:60px;
     display:flex;
     justify-content: space-around;
 }
 .main li{
     list-style: none;
+    display:flex;
 }
 .main a{
     text-decoration:none;
@@ -41,4 +48,48 @@ body{
 .container{
     width:32px;
     height:32px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position:relative;
+    top:16px;
+    cursor: pointer;
+    z-index:100;
+    border-radius:50%;
+}
+.container:hover{
+    background-color: #222;
+    color:#fff;
+    transition: .5s;
+}
+.menu{
+    position: absolute;
+    right: 0;
+    top:0;
+    height: 100vh;
+    width: 50vh;
+    background-color:rgba(34, 34, 34, 0.5);
+    transform: translateX(50vh);
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s;
+    padding: 60px 0 0;
+}
+.show{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+    transition: .5s;
+}
+.menu a{
+    width: 100%;
+    text-align: center;
+    padding: 0 20px;
+}
+.menu a:hover{
+    background-color: #222;
+    color:#fff;
+}
+.second-section{
+    background-image:url('Resources/Palta.jpg');
 }
