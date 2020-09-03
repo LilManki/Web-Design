@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+@import url('https://css.gg/menu.css');
+@import url('https://css.gg/arrow-long-up.css');
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+*,
+*::after,
+*::before{
+	margin:0;
+	padding: 0;
+	box-sizing: border-box;
+	--font-main:'Poppins', sans-serif;
+	--font-text: 'PT Serif', serif;
+}
+nav{
+	display: flex;
+	justify-content: space-between;
+}
+li{
+	font-family: var(--font-main);
+	list-style: none;
+}
+li a{
+	text-decoration: none;
+	color:#000;
+	font-size: 1.2em;
+}
+li a span{
+	color:#24e83b;
+}
+section{
+	min-height: 100vh;
+}
+.main{
+	background-color: #fff837;
+}
+.container{
+	width: 32px;
+	height: 32px;
+	cursor: pointer;
+}
+.gg-menu{
+	top:16px;
+	right: -5px;
+}
+.text{		
+	width: 50%;
+	padding: 30vh 100px;
+	display: flex;
+	flex-flow: column;
+}
+.text h2{
+	font-family: var(--font-main);
+	font-size: 	4em;
+}
+.text p{
+	font-family: var(--font-text);
+	width: 400px;
+	margin-bottom: 20px;
+}
+.perfume{
+	position: absolute;	
+	bottom: 5px;
+	right: 	150px;
+}
+.btn{
+	background-color: #00ccff;
+	width: 100px;
+	height: 40px;
+	padding: 10px;
+	text-align: center;
+	font-size: .9em;
+	font-family: var(--font-main);
+	color:#fff;
+	cursor:pointer;
+}
+.btn:hover{
+	filter: hue-rotate(180deg);
+}
+.laptop{
+	background-color: #00ccff;
+	position: relative;
+}
+.laptop .text{
+	color:#fff;
+}
+.laptop .btn{
+	background-color: #fff837;
+	color:#000;
+}
+.laptop-img{
+	position: absolute;
+	bottom: 100px;
+	right: 	20px;
+}
+.globo{
+	position: relative;
+	background-color: #527f8f;
+}
+.globo img{
+	position: absolute;
+	bottom: 0px;
+	right: 	20px;
+}
+.laptop2{
+	background-color: #2e2e2e;
+	position: relative;
+	color:#fff;
+}
+.laptop2 p{
+	color:#aaa;
+}
+.laptop2 .btn{
+	background-color: #fff837;
+	color:#000;
+}
+.last{
+	background: url('Resources/wp-last.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	color:#fff;
+}
+.last .btn{
+	background-color: #fff837;
+	color:#000;
+}
+.button-up{
+	position: absolute;
+	top:10px;
+	left: 17px;
+}
+.last .container{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	right: 20px;
+	background-color: #00ccff;
+}
