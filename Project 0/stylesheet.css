@@ -90,6 +90,10 @@ body{
     background-color: #222;
     color:#fff;
 }
-.second-section{
+.palta{
     background-image:url('Resources/Palta.jpg');
+    width: 50%;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: -150px 0;
 }
