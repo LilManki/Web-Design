@@ -1,5 +1,6 @@
 @import url('https://css.gg/menu.css');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 *{
     margin:0;
     padding:0;
@@ -7,10 +8,10 @@
 }
 body{
     --font-main: 'Oswald', sans-serif;
+    --font-text: 'Open Sans', sans-serif;
     overflow-x: hidden;
 }
-.main
-,.second-section{
+.main,.image-section{
     min-height: 100vh;
     display: flex;
     background-repeat: no-repeat;
@@ -90,10 +91,73 @@ body{
     background-color: #222;
     color:#fff;
 }
-.palta{
+.palta,.ice-cream{
     background-image:url('Resources/Palta.jpg');
     width: 50%;
     background-repeat: no-repeat;
     background-size:cover;
     background-position: -150px 0;
+}
+.image-section .box-text{
+    width:50%;
+    padding: 50px;
+    display: flex;
+    font-family: var(--font-main);
+    font-size: .5em;
+    flex-flow: column;
+    justify-content: center;
+}
+.box-text *{
+    margin-bottom: 50px;
+}
+.box-text .title{
+    width: 50%;
+}
+.box-text p{
+    font-family: var(--font-text);
+    font-size: .5em;
+    color:#666;
+}
+.view-more{
+    padding: 5px 10px;
+    width: 120px;
+    height: 35px;
+    border: 2px solid #f6bdd0;
+    font-size: .5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor:pointer;
+    transition: .5s;
+}
+.view-more:hover{
+    background-color: #f6bdd0;
+    transition: .5s;
+}
+.about-us{
+    width: 50px;
+    height: 2px;
+    background-color: #f6bdd0;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+.about-text{
+    font-family: var(--font-text);
+    font-size: .5em;
+    color:#f6bdd0;
+    margin-bottom: 5px;
+}
+.contain-about{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin:0;
+}
+.third-section{
+    flex-direction: row-reverse;
+    color:#fdc75d;
+}
+.ice-cream{
+    background-image: url('Resources/ice-cream.jpg');
+    background-position: 0;
 }
