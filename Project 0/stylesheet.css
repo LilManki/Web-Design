@@ -9,9 +9,15 @@
 body{
     --font-main: 'Oswald', sans-serif;
     --font-text: 'Open Sans', sans-serif;
+    --color-main: #444;
+    --color-hover: #fff;
+    --color-transparent: hsl(0deg, 100%, 100%,50%);
+    --color-second-section: #f6bdd0; 
+    --color-third-section: #fdc75d;
+    --color-fourth-section: #0084c7;
     overflow-x: hidden;
 }
-.main,.image-section{
+.main,.image-section,.portfolio{
     min-height: 100vh;
     display: flex;
     background-repeat: no-repeat;
@@ -22,15 +28,15 @@ body{
 .main{
     justify-content: center;
     align-items: center;
-    background-image: url(Resources/Coffie.jpg);
-    color:#222;
+    background-image: url(Resources/Coffie2.jpg);
+    color:var(--color-main);
 }
 .main nav{
     position: absolute;
     top:0;
     left:0;
     width: 100%;
-    border-bottom: hsl(0deg, 100%, 100%,10%) solid 2px;
+    border-bottom: var(--color-transparent) solid 2px;
 }
 .main nav ul{
     height:60px;
@@ -43,7 +49,7 @@ body{
 }
 .main a{
     text-decoration:none;
-    color:#222;
+    color:var(--color-main);
     font-size: .5em;
 }
 .container{
@@ -59,8 +65,8 @@ body{
     border-radius:50%;
 }
 .container:hover{
-    background-color: #222;
-    color:#fff;
+    background-color: var(--color-main);
+    color: var(--color-hover);
     transition: .5s;
 }
 .menu{
@@ -69,12 +75,12 @@ body{
     top:0;
     height: 100vh;
     width: 50vh;
-    background-color:rgba(34, 34, 34, 0.5);
+    background-color:var(--color-transparent);
     transform: translateX(50vh);
     opacity: 0;
     visibility: hidden;
     transition: .5s;
-    padding: 60px 0 0;
+    padding: 61px 0 0;
 }
 .show{
     transform: translateX(0);
@@ -88,10 +94,10 @@ body{
     padding: 0 20px;
 }
 .menu a:hover{
-    background-color: #222;
-    color:#fff;
+    background-color: var(--color-main);
+    color:var(--color-hover);
 }
-.palta,.ice-cream{
+.image{
     background-image:url('Resources/Palta.jpg');
     width: 50%;
     background-repeat: no-repeat;
@@ -122,7 +128,7 @@ body{
     padding: 5px 10px;
     width: 120px;
     height: 35px;
-    border: 2px solid #f6bdd0;
+    border: 2px solid var(--color-second-section);
     font-size: .5em;
     display: flex;
     justify-content: center;
@@ -131,20 +137,20 @@ body{
     transition: .5s;
 }
 .view-more:hover{
-    background-color: #f6bdd0;
+    background-color: var(--color-second-section);
     transition: .5s;
 }
 .about-us{
     width: 50px;
     height: 2px;
-    background-color: #f6bdd0;
+    background-color: var(--color-second-section);
     margin-right: 20px;
     margin-bottom: 5px;
 }
 .about-text{
     font-family: var(--font-text);
     font-size: .5em;
-    color:#f6bdd0;
+    color:var(--color-second-section);
     margin-bottom: 5px;
 }
 .contain-about{
@@ -155,9 +161,85 @@ body{
 }
 .third-section{
     flex-direction: row-reverse;
-    color:#fdc75d;
 }
 .ice-cream{
     background-image: url('Resources/ice-cream.jpg');
     background-position: 0;
+}
+.third-section .about-text{
+    color:var(--color-third-section);
+}
+.third-section .about-us{
+    background-color: var(--color-third-section);
+}
+.third-section .view-more{
+    border-color: var(--color-third-section);
+}
+.third-section .view-more:hover{
+    background-color: var(--color-third-section);
+}
+
+.fourth-section .orange{
+    background-image: url('Resources/Orange.jpg');
+    background-position: -200px 0;
+}
+.fourth-section .about-text{
+    color:var(--color-fourth-section);
+}
+.fourth-section .about-us{
+    background-color: var(--color-fourth-section);
+}
+.fourth-section .view-more{
+    border-color: var(--color-fourth-section);
+}
+.fourth-section .view-more:hover{
+    background-color: var(--color-fourth-section);
+}
+.multiple-image{
+    display:flex;
+}
+.multiple-image *{
+    width: 25%;
+    height:50vh;
+    background-position: 0;
+}
+.portfolio{
+    font-size:1em;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.portfolio span{
+    font-family: var(--font-text);
+    color:var(--color-second-section);
+}
+.portfolio .title{
+    font-size: 3em;
+    margin: 0 30%;
+    text-align: center;
+}
+.container-images,.container-cards{
+    display:flex;
+    justify-content: center;
+    flex-flow: wrap;
+    width: 75%;
+    margin-bottom: 60px;
+}
+.container-images *,
+.container-cards *{
+    background-position:0;
+    margin:3px;
+}
+.container-images *{
+    width: 256px;
+    height: 256px;
+}
+.container-cards{
+    padding:0 110px;
+    justify-content: space-between;
+}
+.container-cards *{
+    width: 180px;
+    height: 213px;
 }
