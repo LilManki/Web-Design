@@ -203,6 +203,21 @@ body{
     height:50vh;
     background-position: 0;
 }
+.multiple-image div:nth-child(1){
+    background-image:url('Resources/cherry.jpg');
+}
+.multiple-image div:nth-child(2){
+    background-image:url('Resources/banana.jpg');
+
+}
+.multiple-image div:nth-child(3){
+    background-image:url('Resources/egg.jpg');
+    
+}
+.multiple-image div:nth-child(4){
+    background-image:url('Resources/mushroom.jpg');
+    
+}
 .portfolio{
     font-size:1em;
     flex-flow: column;
@@ -235,11 +250,40 @@ body{
     width: 256px;
     height: 256px;
 }
+.container-images div:nth-child(1){
+    background-image: url('Resources/cactus.jpg');
+}
+.container-images div:nth-child(2){
+    background-image: url('Resources/mouth.jpg');
+}
+.container-images div:nth-child(3){
+    background-image: url('Resources/lettuce.jpg');
+}
+.container-images div:nth-child(4){
+    background-image: url('Resources/flower.jpg');
+}
+.container-images div:nth-child(5){
+    background-image: url('Resources/camera.jpg');
+}
+.container-images div:nth-child(6){
+    background-image: url('Resources/pinaplle.jpg');
+}
 .container-cards{
     padding:0 110px;
     justify-content: space-between;
 }
-.container-cards *{
+.container-cards .card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 180px;
     height: 213px;
+    position: absolute;
+}
+
+.card:nth-child(1){
+    background-color:var(--color-fourth-section);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
