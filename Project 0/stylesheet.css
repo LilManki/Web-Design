@@ -17,7 +17,7 @@ body{
     --color-fourth-section: #0084c7;
     overflow-x: hidden;
 }
-.main,.image-section,.portfolio{
+.main,.image-section,.portfolio,.contact-us{
     min-height: 100vh;
     display: flex;
     background-repeat: no-repeat;
@@ -218,7 +218,7 @@ body{
     background-image:url('Resources/mushroom.jpg');
     
 }
-.portfolio{
+.portfolio,.contact-us{
     font-size:1em;
     flex-flow: column;
     justify-content: center;
@@ -278,12 +278,53 @@ body{
     align-items: center;
     width: 180px;
     height: 213px;
-    position: absolute;
 }
 
 .card:nth-child(1){
     background-color:var(--color-fourth-section);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.card:nth-child(2){
+    background-color:var(--color-third-section);
+}
+.card:nth-child(3){
+    background-color:var(--color-second-section);
+}
+.card:nth-child(4){
+    background-color:var(--color-fourth-section);
+}
+
+.contact-us{
+    background-image: url('Resources/pool-party.jpg');
+    color:var(--color-main);
+}
+.contact-us *{
+    margin-bottom: 10px;
+    width: 30%;
+}
+.contact-us h2{
+    font-size:3em;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.contact-us input,.contact-us textarea{
+    border: var(--color-main) solid 3px;
+    background:#dadada87;
+    border-radius: 3px;
+    height: 30px;
+    padding: 10px;
+}
+.contact-us textarea{
+    height: 120px;
+    resize: none;
+}
+
+.contact-us input[type="submit"]{
+    background-color:var(--color-main);
+    color:var(--color-third-section);
+    width:100px;
+    font-family:var(--font-main);
+    letter-spacing: 2px;
+    padding:0;
 }
