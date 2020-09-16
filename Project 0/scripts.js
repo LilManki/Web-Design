@@ -10,3 +10,4 @@ burgerBtn.addEventListener('click', () => {
         document.querySelector('.menu').classList.remove('show');
     }
 })
+window.pageXOffset = 0;

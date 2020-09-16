@@ -30,6 +30,11 @@ body{
     align-items: center;
     background-image: url(Resources/Coffie2.jpg);
     color:var(--color-main);
+    background-position: center;
+}
+.main .title{
+    text-align: center;
+    padding:0 20px;
 }
 .main nav{
     position: absolute;
@@ -76,14 +81,14 @@ body{
     height: 100vh;
     width: 50vh;
     background-color:var(--color-transparent);
-    transform: translateX(50vh);
+    transform: translateY(-50vh);
     opacity: 0;
     visibility: hidden;
     transition: .5s;
     padding: 61px 0 0;
 }
 .show{
-    transform: translateX(0);
+    transform: translateY(0);
     opacity: 1;
     visibility: visible;
     transition: .5s;
@@ -104,7 +109,7 @@ body{
     background-size:cover;
     background-position: -150px 0;
 }
-.image-section .box-text{
+.box-text{
     width:50%;
     padding: 50px;
     display: flex;
@@ -179,7 +184,7 @@ body{
     background-color: var(--color-third-section);
 }
 
-.fourth-section .orange{
+.orange{
     background-image: url('Resources/Orange.jpg');
     background-position: -200px 0;
 }
@@ -218,6 +223,7 @@ body{
     background-image:url('Resources/mushroom.jpg');
     
 }
+
 .portfolio,.contact-us{
     font-size:1em;
     flex-flow: column;
@@ -228,6 +234,7 @@ body{
 .portfolio span{
     font-family: var(--font-text);
     color:var(--color-second-section);
+    margin-top: 20px;
 }
 .portfolio .title{
     font-size: 3em;
@@ -278,20 +285,21 @@ body{
     align-items: center;
     width: 180px;
     height: 213px;
+    overflow:hidden;
 }
 
 .card:nth-child(1){
-    background-color:var(--color-fourth-section);
+    background:url(Resources/development.png) center/contain no-repeat, var(--color-fourth-section);
 }
 
 .card:nth-child(2){
-    background-color:var(--color-third-section);
+    background:url(Resources/design.png) center/contain no-repeat, var(--color-third-section);
 }
 .card:nth-child(3){
-    background-color:var(--color-second-section);
+    background:url(Resources/editing.png) center/contain no-repeat, var(--color-second-section);
 }
 .card:nth-child(4){
-    background-color:var(--color-fourth-section);
+    background:url(Resources/strategy.png) center/contain no-repeat, var(--color-fourth-section);
 }
 
 .contact-us{
@@ -328,3 +336,95 @@ body{
     letter-spacing: 2px;
     padding:0;
 }
+
+@media only screen and (max-width: 600px) {
+    .image-section{
+        flex-flow:column;
+    }
+    .image{
+        width: 100%;
+        background-size: 100%;
+        height: 50vh;
+        background-position: center;
+    }
+    .box-text{
+        width: 100%;
+        padding: 30px;
+        font-size: .6em;
+    }
+    .box-text .title{
+        width:100%;
+        text-align: center;
+    }
+    .multiple-image *{
+        height: 20vh;
+        background-size:cover;
+    }
+    .portfolio .title{
+        font-size: 2.5em;
+        padding:20px;
+    }
+    .container-images *{
+        width: 100px;
+        height: 100px;
+        background-size: cover;
+    }
+    .container-cards{
+        padding: 0;
+        flex-flow: row;
+
+    }
+    .container-cards .card{
+        height: 120px;
+    }
+    .contact-us{
+        background-position-x: -300px;
+    }
+    .contact-us *{
+        width: 70%;
+    }
+  }
+  @media only screen and (min-width:601px){
+    .main-img{
+        background-size: 200% 100%;
+        background-position: center;
+    }
+    .multiple-image *{
+        background-position: center;
+    }
+    .multiple-image div:nth-child(2),
+    .multiple-image div:nth-child(4){
+    background-size: 120% 100%;
+    }
+    .container-images *{
+        width: 156px;
+        height: 156px;
+    }
+    .container-cards{
+        padding: 0;
+        justify-content: center;
+    }
+    .container-cards .card{
+        width: 90px;
+        height: 106px;
+
+    }
+    .contact-us * {
+        width: 60%;
+    }
+  }
+
+  @media only screen and (min-width:992px){
+    .main-img {
+        background-size: cover;
+    }
+    .container-images *{
+        width: 220px;
+        height: 220px;
+    }
+    .container-cards .card {
+        width: 160px;
+        height: 212px;
+    }
+  }
+ 
